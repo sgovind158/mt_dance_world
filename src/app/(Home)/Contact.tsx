@@ -16,7 +16,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { name, email, phone, message } = form;
+    const { phone } = form;
     console.log("form", form);
     if (!phoneRegexFun(phone)) {
       toast.error(msg?.invalidPhone);
