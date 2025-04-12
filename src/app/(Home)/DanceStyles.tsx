@@ -54,10 +54,10 @@ const DanceStyles = () => {
                 height={200}
                 className="rounded-md mb-4 object-cover w-full h-[385px]"
               />
-              <h3 className="text-xl font-semibold mb-2 text-pink-600">
+              <h3 className="text-xl font-semibold mb-2 text-pink-600 text-center">
                 {item?.name}
               </h3>
-              <p className=" text-sm text-white">
+              <p className=" text-sm text-white text-center">
                 Join our expert-led {item?.name} classes designed for all
                 levels.
               </p>

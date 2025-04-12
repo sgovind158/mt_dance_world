@@ -49,13 +49,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {/* Logo & Description */}
         <div>
-          <Image
-            src="/assets/logo.png"
-            alt="MT Dance Logo"
-            width={80}
-            height={80}
-            className="mb-4 rounded-[50px]"
-          />
+          <Link href={"/"}>
+            <Image
+              src="/assets/logo.png"
+              alt="MT Dance Logo"
+              width={80}
+              height={80}
+              className="mb-4 rounded-[50px]"
+            />
+          </Link>
           <p className="text-sm">
             MT Dance with Fitness World is your ultimate destination for dance
             and fitness excellence.
@@ -82,8 +84,17 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-3">Contact Us</h3>
           <ul className="space-y-2 text-sm">
-            <li>📍 123 Dance St, Cityname</li>
-            <li>📞 +91 98765 43210</li>
+            <li>
+              📍 <span className="">RJ Fitness</span>
+              <span className="block">PRPJ+FV2, Vasundhara, Sangam Nagar</span>
+              <span className="block">Indore, Madhya Pradesh 452006</span>
+            </li>
+            <li>
+              📞{" "}
+              <a href="tel:+917869097195" className="hover:underline">
+                +91 7869097195
+              </a>
+            </li>
             <li>✉️ mtdance@example.com</li>
           </ul>
         </div>
