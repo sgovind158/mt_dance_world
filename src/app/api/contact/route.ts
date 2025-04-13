@@ -6,9 +6,14 @@ import Contact from "@/models/Contact";
 export async function POST(req: Request) {
   try {
     const request = await req.json();
-    // const { name, email, phone, message } = request;
-    console.log("req", request);
+    const { name, phone } = request;
 
+    if (!name || !phone) {
+      return NextResponse.json(
+        { error: "Name and phone are required" },
+        { status: 400 }
+      );
+    }
     // Save to MongoDB
     await connectDB();
 
@@ -38,7 +43,7 @@ export async function POST(req: Request) {
     //   `,
     // });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, message: "Saved successfully!" });
   } catch (error) {
     console.error(error);
     return NextResponse.json(
