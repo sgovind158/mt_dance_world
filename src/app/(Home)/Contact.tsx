@@ -14,12 +14,32 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { phone } = form;
-    console.log("form", form);
+
     if (!phoneRegexFun(phone)) {
       toast.error(msg?.invalidPhone);
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        toast.success("Message sent successfully!");
+        setForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        toast.error("Failed to send message.");
+      }
+    } catch (err) {
+      toast.error("Something went wrong.");
+      console.error(err);
     }
   };
 
