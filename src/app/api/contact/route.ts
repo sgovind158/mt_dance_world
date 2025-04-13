@@ -6,21 +6,13 @@ import Contact from "@/models/Contact";
 export async function POST(req: Request) {
   try {
     const request = await req.json();
-    const { name, phone } = request;
 
-    if (!name || !phone) {
-      return NextResponse.json(
-        { error: "Name and phone are required" },
-        { status: 400 }
-      );
-    }
     // Save to MongoDB
     await connectDB();
 
-    // Using the .save() method
     const newContact = new Contact({ ...request });
     await newContact.save();
-
+    // console.log("✅ Saved Contact:", savedContact);
     // // Send Email
     // const transporter = nodemailer.createTransport({
     //   service: "gmail",
