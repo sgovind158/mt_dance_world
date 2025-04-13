@@ -32,8 +32,8 @@ const Contact = () => {
 
       const data = await res.json();
       if (data.success) {
-        toast.success("Message sent successfully!");
         setForm({ name: "", email: "", phone: "", message: "" });
+        toast.success("Message sent successfully!");
       } else {
         toast.error("Failed to send message.");
       }
@@ -60,6 +60,7 @@ const Contact = () => {
             handleChange={(e) => {
               setForm({ ...form, name: e.target.value });
             }}
+            value={form?.name}
           />
           <CustomInput
             type="number"
@@ -68,6 +69,7 @@ const Contact = () => {
             handleChange={(e) => {
               setForm({ ...form, phone: e.target.value });
             }}
+            value={form?.phone}
           />
           <CustomInput
             type="email"
@@ -75,6 +77,7 @@ const Contact = () => {
             handleChange={(e) => {
               setForm({ ...form, email: e.target.value });
             }}
+            value={form?.email}
           />
 
           <CustomTextArea
@@ -82,6 +85,7 @@ const Contact = () => {
             handleChange={(e) => {
               setForm({ ...form, message: e.target.value });
             }}
+            value={form?.message}
           />
 
           <div className="flex justify-center items-center">
