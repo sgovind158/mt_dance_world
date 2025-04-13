@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import Contact from "@/models/Contact";
-// import nodemailer from "nodemailer";
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
@@ -14,26 +14,26 @@ export async function POST(req: Request) {
     await newContact.save();
     // console.log("✅ Saved Contact:", savedContact);
     // // Send Email
-    // const transporter = nodemailer.createTransport({
-    //   service: "gmail",
-    //   auth: {
-    //     user: process.env.EMAIL_FROM,
-    //     pass: process.env.EMAIL_PASS,
-    //   },
-    // });
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_FROM,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-    // await transporter.sendMail({
-    //   from: `"MT Dance" <${process.env.EMAIL_FROM}>`,
-    //   to: process.env.EMAIL_TO,
-    //   subject: "New Contact Form Submission",
-    //   html: `
-    //     <h3>New Contact Message</h3>
-    //     <p><strong>Name:</strong> ${name}</p>
-    //     <p><strong>Email:</strong> ${email}</p>
-    //     <p><strong>Phone:</strong> ${phone}</p>
-    //     <p><strong>Message:</strong> ${message}</p>
-    //   `,
-    // });
+    await transporter.sendMail({
+      from: `"MT Dance" <${process.env.EMAIL_FROM}>`,
+      to: process.env.EMAIL_TO,
+      subject: "New Contact Form Submission",
+      html: `
+        <h3>New Contact Message</h3>
+        <p><strong>Name:</strong> ${request?.name}</p>
+        <p><strong>Email:</strong> ${request?.email}</p>
+        <p><strong>Phone:</strong> ${request?.phone}</p>
+        <p><strong>Message:</strong> ${request?.message}</p>
+      `,
+    });
 
     return NextResponse.json({ success: true, message: "Saved successfully!" });
   } catch (error) {
