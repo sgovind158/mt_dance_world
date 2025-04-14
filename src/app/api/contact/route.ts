@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     });
 
     await transporter.sendMail({
-      from: `"MT Dance" <${process.env.EMAIL_FROM}>`,
+      from: `"MT Dance with Fitness World" <${process.env.EMAIL_FROM}>`,
       to: process.env.EMAIL_TO,
       subject: "New Contact Form Submission",
       html: `

@@ -8,23 +8,29 @@ import Image from "next/image";
 const links = [
   {
     id: 1,
-    slug: "home",
+    slug: "#home",
     label: "Home",
+    hash: true,
   },
   {
     id: 2,
-    slug: "about",
+    slug: "#about",
     label: "About",
   },
   {
     id: 3,
-    slug: "styles",
+    slug: "#styles",
     label: "Styles",
   },
   {
     id: 4,
-    slug: "contact",
+    slug: "#contact",
     label: "Contact",
+  },
+  {
+    id: 5,
+    slug: `/instructors/mohan-nayak`,
+    label: `Instructor`,
   },
 ];
 const Navbar = () => {
@@ -50,7 +56,7 @@ const Navbar = () => {
             return (
               <Link
                 key={index}
-                href={`#${item.slug}`}
+                href={`${item.slug}`}
                 className="hover:text-pink-500"
               >
                 {item?.label}

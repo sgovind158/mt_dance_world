@@ -1,0 +1,20 @@
+// .tabScroll {
+//   scrollbar-color: black white; /* Scrollbar thumb and track color */
+//   // scrollbar-width: thin; /* For Firefox */
+//   scrollbar-width: none; /* For Firefox */
+//   scrollbar-gutter: stable both-edges; /* Ensures the scrollbar is always visible */
+
+//   &::-webkit-scrollbar {
+//     height: 1px; /* Scrollbar height for horizontal scrollbar */
+//     width: 1px; /* Scrollbar width for vertical scrollbar */
+//   }
+
+//   &::-webkit-scrollbar-thumb {
+//     background-color: white; /* Scrollbar thumb color */
+//     border-radius: 10px; /* Scrollbar thumb border radius */
+//   }
+
+//   &::-webkit-scrollbar-track {
+//     background-color: black; /* Scrollbar track color */
+//   }
+// }

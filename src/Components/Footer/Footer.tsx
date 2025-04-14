@@ -6,23 +6,29 @@ const Footer = () => {
   const links = [
     {
       id: 1,
-      slug: "home",
+      slug: "#home",
       label: "Home",
+      hash: true,
     },
     {
       id: 2,
-      slug: "about",
+      slug: "#about",
       label: "About",
     },
     {
       id: 3,
-      slug: "styles",
+      slug: "#styles",
       label: "Styles",
     },
     {
       id: 4,
-      slug: "contact",
+      slug: "#contact",
       label: "Contact",
+    },
+    {
+      id: 5,
+      slug: `/instructors/mohan-nayak`,
+      label: `Instructor`,
     },
   ];
 
@@ -71,7 +77,7 @@ const Footer = () => {
             {links?.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link href={`#${item?.slug}`} className="hover:underline">
+                  <Link href={`${item?.slug}`} className="hover:underline">
                     {item?.label}
                   </Link>
                 </li>
