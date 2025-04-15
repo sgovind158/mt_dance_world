@@ -13,6 +13,7 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [loder, setLoder] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,7 +23,7 @@ const Contact = () => {
       toast.error(msg?.invalidPhone);
       return;
     }
-
+    setLoder(true);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -33,13 +34,18 @@ const Contact = () => {
       const data = await res.json();
       if (data.success) {
         setForm({ name: "", email: "", phone: "", message: "" });
-        toast.success("Message sent successfully!");
+        toast.success(
+          "Thank you for reaching out! We have received your message and will get back to you shortly."
+        );
+        setLoder(false);
       } else {
         toast.error("Failed to send message.");
+        setLoder(false);
       }
     } catch (err) {
       toast.error("Something went wrong.");
       console.error(err);
+      setLoder(false);
     }
   };
 
@@ -93,7 +99,7 @@ const Contact = () => {
               type="submit"
               className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold cursor-pointer"
             >
-              Send Message
+              {loder ? "Loading..." : "Send Message"}
             </button>
           </div>
         </form>

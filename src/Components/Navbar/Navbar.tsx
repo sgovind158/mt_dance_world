@@ -29,7 +29,7 @@ const links = [
   },
   {
     id: 5,
-    slug: `/instructors/mohan-nayak`,
+    slug: `/instructor/mohan-nayak`,
     label: `Instructor`,
   },
 ];
@@ -80,7 +80,7 @@ const Navbar = () => {
             return (
               <Link
                 key={index}
-                href={`#${item.slug}`}
+                href={`${item.slug}`}
                 className="block py-2 text-white hover:text-pink-500"
               >
                 {item?.label}

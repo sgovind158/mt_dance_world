@@ -27,14 +27,14 @@ const Footer = () => {
     },
     {
       id: 5,
-      slug: `/instructors/mohan-nayak`,
+      slug: `/instructor/mohan-nayak`,
       label: `Instructor`,
     },
   ];
 
   const socialLinks = [
     {
-      href: "https://www.instagram.com/mt_dance_world?igsh=MXVsb2dpcHZ4ZXplOA==",
+      href: "https://www.instagram.com/mohannayak27world?igsh=MXVvZmZhMjV3Nzk0OA==",
       label: "Instagram",
       icon: <Instagram size={30} />,
     },
@@ -77,7 +77,10 @@ const Footer = () => {
             {links?.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link href={`${item?.slug}`} className="hover:underline">
+                  <Link
+                    href={`${item?.slug}`}
+                    className="hover:underline simpalFont"
+                  >
                     {item?.label}
                   </Link>
                 </li>
@@ -91,17 +94,36 @@ const Footer = () => {
           <h3 className="font-semibold mb-3">Contact Us</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              📍 <span className="">RJ Fitness</span>
-              <span className="block">PRPJ+FV2, Vasundhara, Sangam Nagar</span>
+              📍{" "}
+              <span className="">
+                42-B SANGAM NAGAR Near RJ fitness Chhota Bangadda Road 
+              </span>
               <span className="block">Indore, Madhya Pradesh 452006</span>
             </li>
-            <li>
-              📞{" "}
-              <a href="tel:+917869097195" className="hover:underline">
-                +91 7869097195
+            <li className="flex gap-4">
+              <a
+                href="tel:+917869097195"
+                className="hover:underline simpalFont"
+              >
+                📞 +91 7869097195
+              </a>
+              {"     "}
+              <a
+                href="tel:+916264294091"
+                className="hover:underline simpalFont"
+              >
+                +91 6264294091
               </a>
             </li>
-            <li>✉️ mtdance@example.com</li>
+            <li>
+              ✉️{" "}
+              <a
+                href="mailto:mohan1727nayak@gmail.com"
+                className="hover:underline simpalFont"
+              >
+                mohan1727nayak@gmail.com
+              </a>
+            </li>
           </ul>
         </div>
 

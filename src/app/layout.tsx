@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-import { Open_Sans, Dancing_Script } from "next/font/google";
+import { Dancing_Script, Poppins } from "next/font/google";
 import "./globals.css";
 import Toast from "@/Components/Toast/Toast";
 
@@ -14,16 +13,18 @@ import Toast from "@/Components/Toast/Toast";
 //   subsets: ["latin"],
 // });
 
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-open-sans",
-  display: "swap",
-});
-
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-dancing-script",
+  display: "swap",
+});
+
+// Add Poppins font
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Specify the weights you need
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -40,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.variable} ${dancingScript.variable} antialiased`}
+        className={`${poppins.variable} ${dancingScript.variable} antialiased`}
       >
         {children}
         <Toast />

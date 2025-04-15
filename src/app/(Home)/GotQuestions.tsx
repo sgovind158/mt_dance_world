@@ -10,7 +10,7 @@ const accordionItems = [
     id: 1,
     title: "What dance styles do you offer?",
     content:
-      "We offer a variety of dance styles including Bollywood, Hip-Hop, Contemporary, Classical, and Freestyle. There's something for every age and skill level!",
+      "We offer a variety of dance styles including Bollywood, Hip-Hop, Contemporary, Classical,house ,Freestyle and many more. There's something for every age and skill level!",
   },
   {
     id: 2,
@@ -46,13 +46,13 @@ const accordionItems = [
     id: 7,
     title: "What are the class timings?",
     content:
-      "We have flexible batch timings throughout the week, including evenings and weekends. Morning batches: 8 AM - 10 AM. Evening batches: 5 PM - 8 PM. Weekend special batches are also available.",
+      "We have flexible batch timings throughout the week, including evenings and weekends. Morning batches: 8 AM - 11 AM. Evening batches: 5 PM - 9 PM. Weekend special batches are also available.",
   },
   {
     id: 8,
     title: "What are the fees for the dance classes?",
     content:
-      "Our monthly fee starts at ₹2,000, depending on the dance style and batch. Discounts are available for siblings and quarterly enrollments.",
+      "Our monthly fee starts at ₹1,000, depending on the dance style and batch. Discounts are available for quarterly, half-yearly, and yearly enrollments.",
   },
 ];
 const GotQuestions: React.FC = () => {

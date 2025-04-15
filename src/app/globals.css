@@ -3,7 +3,7 @@
 :root {
   /* --background: #ffffff; */
   /* --foreground: #171717; */
-  --font-open-sans: "Open Sans", sans-serif;
+  --font-poppins: "Poppins";
   --font-dancing-script: "Dancing Script", cursive;
 }
 
@@ -24,7 +24,7 @@ html {
 
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: var(--font-open-sans);
+  font-family: var(--font-poppins);
 }
 
 h1,
@@ -32,8 +32,22 @@ h2,
 h3,
 a,
 input,
-textarea,
-button,
-p {
+textarea {
   font-family: var(--font-dancing-script);
+}
+
+.simpalFont {
+  font-family: var(--font-poppins);
+}
+
+.swiper {
+  width: 100%;
+  height: auto; /* adjust to content */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* stretch card height */
+  height: auto;
 }

@@ -7,7 +7,7 @@ const data = [
   {
     id: 1,
     name: "Hip Hop",
-    img: "/assets/hip-hop2.png",
+    img: "/assets/hip_hop.jpg",
   },
   {
     id: 2,
@@ -16,8 +16,8 @@ const data = [
   },
   {
     id: 3,
-    name: "Bharatnatyam",
-    img: "/assets/natyam.png",
+    name: "Classical",
+    img: "/assets/bahratnatyam.jpg",
   },
   {
     id: 4,

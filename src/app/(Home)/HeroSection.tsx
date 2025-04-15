@@ -1,12 +1,32 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { Facebook, Instagram, Youtube } from "lucide-react";
+import Link from "next/link";
 
+const socialLinks = [
+  {
+    href: "https://www.instagram.com/mohannayak27world?igsh=MXVvZmZhMjV3Nzk0OA==",
+    label: "Instagram",
+    icon: <Instagram size={30} />,
+  },
+  {
+    href: "https://youtube.com/@nayak27975?si=qhqVgq8qEsrLVq0e",
+    label: "YouTube",
+    icon: <Youtube size={30} />,
+  },
+  {
+    href: "https://www.facebook.com/share/1CRbe5Gkde/",
+    label: "Facebook",
+    icon: <Facebook size={30} />,
+  },
+  // { href: "#", label: "Twitter", icon: <Twitter size={20} /> },
+];
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="mt-[112px] relative flex flex-col items-center justify-center h-screen bg-[url('/assets/img1.png')] bg-cover bg-center text-white text-center p-4 pt-28"
+      className="relative mt-[112px] relative flex flex-col items-center justify-center h-screen bg-[url('/assets/img1.png')] bg-cover bg-center text-white text-center p-4 pt-28"
     >
       <motion.div
         className=" bg-opacity-60 p-8 rounded-xl max-w-3xl"
@@ -44,6 +64,19 @@ const HeroSection = () => {
           Join Now
         </motion.button>
       </motion.div>
+      <div className="bottom-28 left-10 absolute flex flex-col space-x-4 ">
+        {socialLinks.map((social, index) => (
+          <Link
+            key={index}
+            href={social.href}
+            className="hover:text-gray-300"
+            aria-label={social.label}
+            target="_blank"
+          >
+            {social.icon}
+          </Link>
+        ))}
+      </div>
     </section>
   );
 };

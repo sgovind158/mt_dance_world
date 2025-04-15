@@ -6,10 +6,10 @@ const WhyChooseUse = () => {
       <h2 className="text-3xl text-white font-bold mb-10">Why Choose Us</h2>
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {[
-          "Experienced Instructors",
+          "Experienced Instructor",
           "Affordable Fees",
           "Flexible Timings",
-          "Annual Performances",
+          "Weekly Performances",
         ].map((reason) => (
           <div
             key={reason}
