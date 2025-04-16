@@ -8,7 +8,7 @@ import Image from "next/image";
 const links = [
   {
     id: 1,
-    slug: "#home",
+    slug: "/",
     label: "Home",
     hash: true,
   },

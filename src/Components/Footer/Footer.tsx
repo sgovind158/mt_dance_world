@@ -6,7 +6,7 @@ const Footer = () => {
   const links = [
     {
       id: 1,
-      slug: "#home",
+      slug: "/",
       label: "Home",
       hash: true,
     },
