@@ -3,6 +3,7 @@ import clsx from "clsx";
 import styles from "./style/manageSubscription.module.scss";
 import { tableHeading } from "./data";
 import CouponsTable from "./CouponsTable";
+import Loader from "@/Components/Loading/Loader";
 
 interface Contact {
   createdAt?: string;
@@ -17,21 +18,28 @@ const Coupons = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [totalPages, setTotalPages] = useState<number>(1);
   const [totalItem, setTotalItem] = useState<number>(0);
-
+  const [loder, setLoder] = useState(false);
   useEffect(() => {
     const fetchContacts = async () => {
+      setLoder(true);
       const res = await fetch(`/api/contact?page=${page}&limit=5`);
       const data = await res.json();
       if (data?.success) {
         setContacts(data?.data);
         setTotalPages(data?.pagination?.totalPages);
         setTotalItem(data?.pagination?.total);
+        setLoder(false);
       }
     };
 
     fetchContacts();
   }, [page]);
 
+  const renderLoading = () => {
+    if (loder) {
+      return <Loader />;
+    }
+  };
   return (
     <div className={clsx(styles.leftSidebarMaindDiv, "")}>
       {/* heading section */}
@@ -54,6 +62,7 @@ const Coupons = () => {
           />
         </div>
       </div>
+      {renderLoading()}
     </div>
   );
 };
