@@ -1,25 +1,31 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 :root {
-  /* --background: #ffffff; */
-  /* --foreground: #171717; */
+  --background: #ffffff;
+  --foreground: #171717;
   --font-poppins: "Poppins";
   --font-dancing-script: "Dancing Script", cursive;
 }
 
-@theme inline {
-  /* --color-background: var(--background); */
-  /* --color-foreground: var(--foreground); */
-}
+/* [data-theme="light"] {
+  background-color: white;
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+} */
+
+/* @media (prefers-color-scheme: dark) {
   :root {
-    /* --background: #0a0a0a; */
-    /* --foreground: #ededed; */
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
-}
+} */
 html {
   scroll-behavior: smooth;
+  background-color: white;
 }
 
 body {
@@ -29,10 +35,7 @@ body {
 
 h1,
 h2,
-h3,
-a,
-input,
-textarea {
+h3 {
   font-family: var(--font-dancing-script);
 }
 
@@ -50,4 +53,75 @@ textarea {
   justify-content: center;
   align-items: stretch; /* stretch card height */
   height: auto;
+}
+
+/* // pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.page-item {
+  margin: 0 0px;
+}
+
+.page-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #0b183a;
+  text-decoration: none;
+  color: #0b183a;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.page-link:hover {
+  background-color: #f1f1f1;
+}
+
+.active .page-link {
+  background-color: #0b183a;
+  color: white;
+  border-color: #0b183a;
+}
+
+.page-item.disabled .page-link {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.tabScroll {
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: hidden;
+  padding-right: 10px;
+  scrollbar-width: thin;
+}
+
+/* Scrollbar styling only for WebKit browsers (Chrome, Edge, Safari) */
+.tabScroll::-webkit-scrollbar {
+  width: 10px; /* Set your custom scrollbar width */
+}
+
+.tabScroll::-webkit-scrollbar-track {
+  background: black; /* Track color */
+  border-radius: 10px;
+}
+
+.tabScroll::-webkit-scrollbar-thumb {
+  background: black; /* Scrollbar color */
+  border-radius: 10px;
+  border: 2px solid #f1f1f1; /* To give some padding effect */
+}
+
+.tabScroll::-webkit-scrollbar-thumb:hover {
+  background: black;
+  width: 1px;
+}
+
+.modal-box {
+  background-color: white;
 }

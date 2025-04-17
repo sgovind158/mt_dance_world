@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { getLocal, removeLocal } from "@/utils/storage";
+import { useRouter } from "next/navigation";
 
 const links = [
   {
@@ -35,7 +37,12 @@ const links = [
 ];
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const userData = getLocal("userData");
+  const router = useRouter();
+  const handleLogout = () => {
+    removeLocal("userData");
+    router.push("/login");
+  };
   return (
     <header className="bg-[#0b183a] shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -63,6 +70,14 @@ const Navbar = () => {
               </Link>
             );
           })}
+          {userData?.email && userData?.password && (
+            <button
+              onClick={handleLogout}
+              className="hover:text-pink-500 cursor-pointer"
+            >
+              {"Logout"}
+            </button>
+          )}
         </nav>
         <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -87,6 +102,14 @@ const Navbar = () => {
               </Link>
             );
           })}
+          {userData?.email && userData?.password && (
+            <button
+              onClick={handleLogout}
+              className="hover:text-pink-500 cursor-pointer"
+            >
+              {"Logout"}
+            </button>
+          )}
         </div>
       )}
     </header>

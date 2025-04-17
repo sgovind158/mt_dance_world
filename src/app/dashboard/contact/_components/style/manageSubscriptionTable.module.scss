@@ -1,0 +1,50 @@
+@mixin basicFontSize($fontSize: 16px, $fontWeight: normal, $color: white) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $color;
+}
+.heading span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #3d3d3d;
+}
+.heading {
+  border-bottom: none;
+  background: #e7e7e7 !important;
+}
+.trTable > td {
+  font-size: 14px;
+  font-weight: 400;
+  color: #3d3d3d;
+  // border-bottom: none;
+}
+
+.trTable {
+  .couponName {
+    font-size: 14px;
+    font-weight: 800;
+    color: #ff5900;
+  }
+}
+
+.trTable > .orderId {
+  font-weight: 700;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  @include basicFontSize(14px, 400, #3e63ff);
+  & > svg {
+    min-width: 18px;
+    min-height: 18px;
+  }
+}
+
+.invoice {
+  min-width: 180px;
+}
+
+// .createdAt {
+//   min-width: 130px;
+// }

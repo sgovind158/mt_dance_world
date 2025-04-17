@@ -1,0 +1,53 @@
+@mixin basicFontSize($fontSize: 16px, $fontWeight: normal, $color: white) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $color;
+}
+
+.leftSidebarMaindDiv {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  height: 400px;
+}
+
+.upperDiv {
+  margin-top: 20px;
+
+  & > div {
+    span {
+      margin-bottom: 6px;
+      @include basicFontSize(18px, bold, #000000);
+    }
+
+    & > p {
+      @include basicFontSize(13px, 600, #000000);
+    }
+  }
+}
+
+.lowerDiv {
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 16px;
+    }
+    a {
+      @include basicFontSize(16px, 600, #273f4b);
+      text-decoration: none;
+    }
+
+    .active {
+      @include basicFontSize(16px, 600, #0b183a);
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .leftSidebarMaindDiv {
+    height: auto;
+    border-radius: 0px;
+    border-top: 0px;
+    border-right: 0px;
+  }
+}

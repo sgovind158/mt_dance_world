@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import Contact from "@/models/Contact";
 import nodemailer from "nodemailer";
+import mongoose from "mongoose";
 
 export async function POST(req: Request) {
   try {
@@ -40,6 +41,78 @@ export async function POST(req: Request) {
     console.error(error);
     return NextResponse.json(
       { success: false, error: "Something went wrong" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET(req: Request) {
+  try {
+    await connectDB();
+
+    const { searchParams } = new URL(req.url);
+    const page = parseInt(searchParams.get("page") || "1");
+    const limit = parseInt(searchParams.get("limit") || "10");
+
+    const skip = (page - 1) * limit;
+
+    const contacts = await Contact.find()
+      .sort({ createdAt: -1 }) // most recent first
+      .skip(skip)
+      .limit(limit);
+
+    const total = await Contact.countDocuments();
+
+    return NextResponse.json({
+      success: true,
+      data: contacts,
+      pagination: {
+        total,
+        page,
+        limit,
+        totalPages: Math.ceil(total / limit),
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { success: false, error: "Failed to fetch contacts" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function DELETE(req: Request) {
+  try {
+    await connectDB();
+
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
+
+    if (!id || !mongoose.Types.ObjectId.isValid(id)) {
+      return NextResponse.json(
+        { success: false, error: "Invalid or missing ID" },
+        { status: 400 }
+      );
+    }
+
+    const deletedContact = await Contact.findByIdAndDelete(id);
+
+    if (!deletedContact) {
+      return NextResponse.json(
+        { success: false, error: "Contact not found" },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "Contact deleted successfully",
+    });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { success: false, error: "Failed to delete contact" },
       { status: 500 }
     );
   }

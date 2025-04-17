@@ -1,5 +1,6 @@
 "use client";
 
+import { setLocal } from "@/utils/storage";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -15,22 +16,27 @@ export default function LoginPage() {
     e.preventDefault();
     console.log(
       form,
-      process.env.adminLoginEmail,
-      process.env.adminLoginPassword
+      process.env.NEXT_PUBLIC_ADMIN_LOGIN_EMAIL,
+      process.env.NEXT_PUBLIC_ADMIN_LOGIN_PASSWORD
     );
+
     if (
-      form?.email === process.env.adminLoginEmail &&
-      form?.password === process.env.adminLoginPassword
+      form?.email === process.env.NEXT_PUBLIC_ADMIN_LOGIN_EMAIL &&
+      form?.password === process.env.NEXT_PUBLIC_ADMIN_LOGIN_PASSWORD
     ) {
-      router.push("/dashboard");
+      setLocal("userData", form);
+      router.push("/dashboard/contact");
     } else {
       toast.error("Wrong Creadential");
     }
   };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-        <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
+        <h2 className="text-2xl font-bold text-center mb-6 simpalFont text-black">
+          Login
+        </h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label
@@ -45,7 +51,7 @@ export default function LoginPage() {
               type="email"
               id="email"
               placeholder="Enter Your Email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="focus:text-black placeholder:text-black text-black simpalFont w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -61,8 +67,8 @@ export default function LoginPage() {
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               type="password"
               id="password"
-              placeholder=""
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter Your Password"
+              className="placeholder:text-black text-black simpalFont w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
