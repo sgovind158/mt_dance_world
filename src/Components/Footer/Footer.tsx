@@ -35,7 +35,7 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      href: "https://www.google.com/search?q=mt+dance+with+fitness+world&rlz=1C1UEAD_enIN1084IN1084&oq=mt+dance+w&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyBggCEEUYQDIGCAMQRRg5MggIBBAAGBYYHjIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDUyNjdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8",
+      href: "https://g.co/kgs/NBCepnu",
       label: "Google Profile",
       icon: <BsGoogle size={30} />,
     },
