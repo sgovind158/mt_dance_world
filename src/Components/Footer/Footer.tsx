@@ -2,6 +2,7 @@ import React from "react";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { BsGoogle } from "react-icons/bs";
 const Footer = () => {
   const links = [
     {
@@ -34,6 +35,11 @@ const Footer = () => {
 
   const socialLinks = [
     {
+      href: "https://www.google.com/search?q=mt+dance+with+fitness+world&rlz=1C1UEAD_enIN1084IN1084&oq=mt+dance+w&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyBggCEEUYQDIGCAMQRRg5MggIBBAAGBYYHjIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDUyNjdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8",
+      label: "Google Profile",
+      icon: <BsGoogle size={30} />,
+    },
+    {
       href: "https://www.instagram.com/mohannayak27world?igsh=MXVvZmZhMjV3Nzk0OA==",
       label: "Instagram",
       icon: <Instagram size={30} />,
@@ -50,6 +56,9 @@ const Footer = () => {
     },
     // { href: "#", label: "Twitter", icon: <Twitter size={20} /> },
   ];
+
+  const directionsUrl =
+    "https://www.google.com/maps/place/MT+DANCE+WITH+FITNESS+WORLD/@22.7361515,75.8295663,17z/data=!4m16!1m9!3m8!1s0x3962fd0001c3e8f9:0xc5a850e1421c82f9!2sMT+DANCE+WITH+FITNESS+WORLD!8m2!3d22.7361466!4d75.8321412!9m1!1b1!16s%2Fg%2F11y6gcy66j!3m5!1s0x3962fd0001c3e8f9:0xc5a850e1421c82f9!8m2!3d22.7361466!4d75.8321412!16s%2Fg%2F11y6gcy66j?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D";
   return (
     <footer className="bg-[#0b183a] text-white py-10 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
@@ -94,11 +103,18 @@ const Footer = () => {
           <h3 className="font-semibold mb-3">Contact Us</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              📍{" "}
-              <span className="">
-                42-B SANGAM NAGAR Near RJ fitness Chhota Bangadda Road 
-              </span>
-              <span className="block">Indore, Madhya Pradesh 452006</span>
+              <a
+                href={directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline simpalFont"
+              >
+                📍{" "}
+                <span className="">
+                  42-B SANGAM NAGAR Near RJ fitness Chhota Bangadda Road 
+                </span>
+                <span className="block">Indore, Madhya Pradesh 452006</span>
+              </a>
             </li>
             <li className="flex gap-4">
               <a

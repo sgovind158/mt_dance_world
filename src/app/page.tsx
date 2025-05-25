@@ -7,12 +7,14 @@ import Contact from "./(Home)/Contact";
 import Footer from "@/Components/Footer/Footer";
 import TrustedBy500 from "./(Home)/TrustedBy500";
 import GotQuestions from "./(Home)/GotQuestions";
+import Awards from "./(Home)/Awards";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <Navbar />
       <HeroSection />
+      <Awards />
       <AboutUs />
       <DanceStyles />
       <WhyChooseUse />

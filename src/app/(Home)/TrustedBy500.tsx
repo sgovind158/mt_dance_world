@@ -5,12 +5,9 @@ import React from "react";
 import styles from "./style/trustedBy500.module.scss";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
 const data = [
@@ -347,7 +344,7 @@ const TrustedBy500: React.FC = () => {
             >
               {data?.map((el) => (
                 <SwiperSlide key={el?.id}>
-                  <div className="w-full h-full">
+                  <div className="">
                     <TrustedCard el={el} />
                   </div>
                 </SwiperSlide>

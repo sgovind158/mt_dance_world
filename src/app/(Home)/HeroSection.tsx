@@ -1,10 +1,16 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Facebook, Instagram, MapPin, Youtube } from "lucide-react";
 import Link from "next/link";
+import { BsGoogle } from "react-icons/bs";
 
 const socialLinks = [
+  {
+    href: "https://www.google.com/search?q=mt+dance+with+fitness+world&rlz=1C1UEAD_enIN1084IN1084&oq=mt+dance+w&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyBggCEEUYQDIGCAMQRRg5MggIBBAAGBYYHjIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDUyNjdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8",
+    label: "Google Profile",
+    icon: <BsGoogle size={30} />,
+  },
   {
     href: "https://www.instagram.com/mohannayak27world?igsh=MXVvZmZhMjV3Nzk0OA==",
     label: "Instagram",
@@ -23,6 +29,9 @@ const socialLinks = [
   // { href: "#", label: "Twitter", icon: <Twitter size={20} /> },
 ];
 const HeroSection = () => {
+  const directionsUrl =
+    "https://www.google.com/maps/place/MT+DANCE+WITH+FITNESS+WORLD/@22.7361515,75.8295663,17z/data=!4m16!1m9!3m8!1s0x3962fd0001c3e8f9:0xc5a850e1421c82f9!2sMT+DANCE+WITH+FITNESS+WORLD!8m2!3d22.7361466!4d75.8321412!9m1!1b1!16s%2Fg%2F11y6gcy66j!3m5!1s0x3962fd0001c3e8f9:0xc5a850e1421c82f9!8m2!3d22.7361466!4d75.8321412!16s%2Fg%2F11y6gcy66j?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D";
+
   return (
     <section
       id="home"
@@ -63,8 +72,19 @@ const HeroSection = () => {
         >
           Join Now
         </motion.button>
+
+        <a
+          href={directionsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" mt-4 max-w-[250px] justify-center items-center gap-1 mt-4 mx-auto flex bg-[#0b183a] hover:bg-[#0b183af5] px-6 py-3 rounded-full text-white hover:font-semibold cursor-pointer"
+          aria-label="Get Directions"
+        >
+          <MapPin size={20} />
+          Get Directions
+        </a>
       </motion.div>
-      <div className="bottom-28 left-10 absolute flex flex-col space-x-4 ">
+      <div className="bottom-28 left-10 absolute flex flex-col space-x-4 gap-1 ">
         {socialLinks.map((social, index) => (
           <Link
             key={index}
