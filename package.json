@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.4.0-canary.51",
     "clsx": "^2.1.1",
     "framer-motion": "^12.6.5",
     "lucide-react": "^0.487.0",

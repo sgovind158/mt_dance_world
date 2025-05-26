@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Dancing_Script, Poppins } from "next/font/google";
 import "./globals.css";
 import Toast from "@/Components/Toast/Toast";
-
+import { GoogleTagManager } from "@next/third-parties/google";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -45,6 +45,7 @@ export default function RootLayout({
       >
         {children}
         <Toast />
+        <GoogleTagManager gtmId="G-6V30M7EPF5" />
       </body>
     </html>
   );
