@@ -32,7 +32,7 @@ Built a website for a local dance and fitness studio using Next.js and TypeScrip
 ## Website Sneak Peeks
 
 - **Home Page**  
-  ![Hero Section](/snak_pic/hero_section.png?raw=true)
+  ![Hero Section](./snak_pic/hero_section.png?raw=true)
 - **Instructor Section**  
   ![Instructor Section](./SneakPeeks/Instructors.png?raw=true)
 
