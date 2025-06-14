@@ -29,18 +29,28 @@ Built a website for a local dance and fitness studio using Next.js and TypeScrip
 
 - [@sgovind158](https://github.com/sgovind158)
 
-## Website Sneak Peeks
+## Website
 
 - **Home Page**  
   ![Hero Section](./snak_pic/hero_section.png?raw=true)
-- **Instructor Section**  
-  ![Instructor Section](./SneakPeeks/Instructors.png?raw=true)
+
+- **Dance Style Section**  
+  ![Dance Style Section](./snak_pic/dance_style.png?raw=true)
+
+- **Testimonial**  
+  ![Testimonial](./snak_pic/testimonial_section.png?raw=true)
 
 - **Contact Form**  
-  ![Contact Form](./SneakPeeks/Contact.png?raw=true)
+  ![Contact](./snak_pic/contact_form.png?raw=true)
 
-- **Mobile View**  
-  ![Mobile View](./SneakPeeks/Mobile.png?raw=true)
+  **Instructor Page**  
+  ![Instructor](./snak_pic/ins_section.png?raw=true)
+
+  **Inquery Dashboard**  
+  ![Inquery Dashboard](./snak_pic/inquery_dashboard.png?raw=true)
+
+  **Mobile View**  
+  ![Mobile View](./snak_pic/mt_hero_mobile_img.jpg?raw=true)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
