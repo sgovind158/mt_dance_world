@@ -1,3 +1,74 @@
+
+# MTDance with Fitness World
+
+Built a website for a local dance and fitness studio using Next.js and TypeScript. Integrated a contact form with Nodemailer for email submissions and MongoDB for storing user inquiries. Designed a fully responsive UI using Tailwind CSS.
+
+## Deployed Site
+
+[MTDance with Fitness World](https://www.mtdancewithfitnessworld.com/)
+
+### Tech Stack
+
+- **Next.js** | **React.js** | **Tailwind CSS** | **TypeScript**
+
+### Library & Tools Used
+
+- **Framer Motion** (Animations)  
+- **swiper** (slider)  
+- **Lucide React** (Icons)  
+- **nodemailer** (Contact Form Email Integration)
+
+### Features
+
+- Homepage with animated hero section  
+- Instructor profile and testimonials  
+- Smooth scroll-based navigation  
+- Fully responsive on all devices  
+- Contact form integrated with nodemailer  
+  
+
+### Contributors
+
+- [@sgovind158](https://github.com/sgovind158)  
+
+
+## Website Sneak Peeks
+
+- **Home Page**  
+  ![Home Page](./SneakPeeks/Home.png?raw=true)
+
+  
+- **Instructor Section**  
+  ![Instructor Section](./SneakPeeks/Instructors.png?raw=true)
+
+
+- **Contact Form**  
+  ![Contact Form](./SneakPeeks/Contact.png?raw=true)
+
+- **Mobile View**  
+  ![Mobile View](./SneakPeeks/Mobile.png?raw=true)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
