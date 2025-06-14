@@ -19,8 +19,7 @@ const instructor = {
     "Popping",
   ],
   socials: {
-    instagram:
-      "https://www.instagram.com/mohannayak27world?igsh=MXVvZmZhMjV3Nzk0OA==",
+    instagram: "https://www.instagram.com/mt_dance_with_fitness_world/",
     youtube: "https://youtube.com/@nayak27975?si=qhqVgq8qEsrLVq0e",
   },
 };

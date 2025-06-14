@@ -1,6 +1,5 @@
 "use client";
 import clsx from "clsx";
-// import Image from "next/image";
 import React from "react";
 import styles from "./style/trustedBy500.module.scss";
 import { motion } from "framer-motion";
@@ -72,6 +71,7 @@ const TrustedCard: React.FC<TrustedCardProps> = ({ el }) => {
     </div>
   );
 };
+
 const Awards: React.FC = () => {
   return (
     <section className=" xxl:max-w-[1566px] xxl:m-auto px-[16px] md:px-[24px] xl:px-[66px] bg-[#FEF9F1]">
@@ -94,11 +94,8 @@ const Awards: React.FC = () => {
             </motion.h2>
             <motion.p className="text-center text-[#3D3D3D] text-[18px] mt-[22px] xl:px-[70px]">
               Explore the milestones and honors that showcase our commitment to
-              excellence in dance education.{" "}
-              <strong>
-                Our awards reflect the passion, dedication, and talent of our
-                students and instructors.
-              </strong>
+              excellence in dance education. Our awards reflect the passion,
+              dedication, and talent of our students and instructors.
             </motion.p>
           </div>
 

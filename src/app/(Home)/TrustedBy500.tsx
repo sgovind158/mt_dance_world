@@ -1,6 +1,5 @@
 "use client";
 import clsx from "clsx";
-// import Image from "next/image";
 import React from "react";
 import styles from "./style/trustedBy500.module.scss";
 import { motion } from "framer-motion";
@@ -271,7 +270,6 @@ const TrustedCard: React.FC<TrustedCardProps> = ({ el }) => {
       </p>
 
       <div className="mt-[70px] flex justify-center gap-2">
-        {/* <Image src={el?.img} alt={el?.alt} width="48" height="50" /> */}
         <div>
           <h3
             className={clsx(
@@ -294,6 +292,7 @@ const TrustedCard: React.FC<TrustedCardProps> = ({ el }) => {
     </div>
   );
 };
+
 const TrustedBy500: React.FC = () => {
   return (
     <section className=" xxl:max-w-[1566px] xxl:m-auto px-[16px] md:px-[24px] xl:px-[66px] bg-[#FEF9F1]">

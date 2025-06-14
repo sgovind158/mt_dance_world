@@ -19,6 +19,7 @@ const Coupons = () => {
   const [totalPages, setTotalPages] = useState<number>(1);
   const [totalItem, setTotalItem] = useState<number>(0);
   const [loder, setLoder] = useState(false);
+
   useEffect(() => {
     const fetchContacts = async () => {
       setLoder(true);
@@ -40,6 +41,7 @@ const Coupons = () => {
       return <Loader />;
     }
   };
+
   return (
     <div className={clsx(styles.leftSidebarMaindDiv, "")}>
       {/* heading section */}

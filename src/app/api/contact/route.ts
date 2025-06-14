@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     const newContact = new Contact({ ...request });
     await newContact.save();
-    // console.log("✅ Saved Contact:", savedContact);
+
     // // Send Email
     const transporter = nodemailer.createTransport({
       service: "gmail",

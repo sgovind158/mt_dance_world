@@ -40,7 +40,7 @@ const Footer = () => {
       icon: <BsGoogle size={30} />,
     },
     {
-      href: "https://www.instagram.com/mohannayak27world?igsh=MXVvZmZhMjV3Nzk0OA==",
+      href: "https://www.instagram.com/mt_dance_with_fitness_world/",
       label: "Instagram",
       icon: <Instagram size={30} />,
     },

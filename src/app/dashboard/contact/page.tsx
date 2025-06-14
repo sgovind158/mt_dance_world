@@ -6,11 +6,12 @@ import Coupons from "./_components/Coupons";
 import LeftSidebar from "../../../Components/Sidebar/LeftSidebar";
 import { getLocal } from "@/utils/storage";
 import { useRouter } from "next/navigation";
+
 export default function CouponsPage() {
   const userData = getLocal("userData");
   const router = useRouter();
-  console.log("userData", userData);
 
+  // If userData is not present, redirect to login page
   if (!userData?.email && !userData?.password) {
     router.push("/login");
     return;

@@ -13,12 +13,15 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+
   const [loder, setLoder] = useState(false);
 
+  // Function to handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { phone } = form;
 
+    // Validates phone number and sends data to the server
     if (!phoneRegexFun(phone)) {
       toast.error(msg?.invalidPhone);
       return;

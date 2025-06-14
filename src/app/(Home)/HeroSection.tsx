@@ -12,7 +12,7 @@ const socialLinks = [
     icon: <BsGoogle size={30} />,
   },
   {
-    href: "https://www.instagram.com/mohannayak27world?igsh=MXVvZmZhMjV3Nzk0OA==",
+    href: "https://www.instagram.com/mt_dance_with_fitness_world/",
     label: "Instagram",
     icon: <Instagram size={30} />,
   },
@@ -26,8 +26,8 @@ const socialLinks = [
     label: "Facebook",
     icon: <Facebook size={30} />,
   },
-  // { href: "#", label: "Twitter", icon: <Twitter size={20} /> },
 ];
+
 const HeroSection = () => {
   const directionsUrl =
     "https://www.google.com/maps/place/MT+DANCE+WITH+FITNESS+WORLD/@22.7361515,75.8295663,17z/data=!4m16!1m9!3m8!1s0x3962fd0001c3e8f9:0xc5a850e1421c82f9!2sMT+DANCE+WITH+FITNESS+WORLD!8m2!3d22.7361466!4d75.8321412!9m1!1b1!16s%2Fg%2F11y6gcy66j!3m5!1s0x3962fd0001c3e8f9:0xc5a850e1421c82f9!8m2!3d22.7361466!4d75.8321412!16s%2Fg%2F11y6gcy66j?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D";

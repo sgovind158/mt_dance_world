@@ -1,7 +1,5 @@
 "use client";
-// import Image from "next/image";
 import React from "react";
-// import Acc1 from "../components/client/Accrodian/Acc1";
 import { motion } from "framer-motion";
 import Acc1 from "@/Components/Accrodian/Acc1";
 
@@ -55,6 +53,7 @@ const accordionItems = [
       "Our monthly fee starts at ₹1,000, depending on the dance style and batch. Discounts are available for quarterly, half-yearly, and yearly enrollments.",
   },
 ];
+
 const GotQuestions: React.FC = () => {
   return (
     <section className="  xxl:max-w-[1566px] xxl:mx-auto px-[16px] bg-[#0b183a]">
