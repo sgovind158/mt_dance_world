@@ -38,7 +38,8 @@ Built a website for a local dance and fitness studio using Next.js and TypeScrip
   ![Dance Style Section](./snak_pic/dance_style.png?raw=true)
 
 - **Testimonial**  
-  ![Testimonial](./snak_pic/testimonial_section.png?raw=true)
+  <img width="1894" height="706" alt="image" src="https://github.com/user-attachments/assets/00454fd9-ea9b-48a9-bacd-a4e25cd6aa2b" />
+
 
 - **Contact Form**  
   ![Contact](./snak_pic/contact_form.png?raw=true)
