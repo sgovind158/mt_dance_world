@@ -45,7 +45,7 @@ export default function RootLayout({
       >
         {children}
         <Toast />
-        <GoogleTagManager gtmId="G-6V30M7EPF5" />
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
       </body>
     </html>
   );

@@ -253,17 +253,15 @@ const TrustedCard: React.FC<TrustedCardProps> = ({ el }) => {
     <div
       key={el?.id}
       className={clsx(
-        "bg-white rounded-lg px-6 pb-[55px] pt-[80px] border border-[#DADADA]",
+        "bg-[#070707] rounded-lg px-6 pb-[55px] pt-[80px] border border-[#DADADA]",
         styles.boxShadow
       )}
-      style={{
-        background: el?.id === 2 ? "#FEF9F1" : el?.id === 3 ? "#070707" : "",
-      }}
+      
     >
       <p
         className={clsx(
           "text-center  font-[300] ",
-          el?.id == 3 && "text-white"
+         "text-white"
         )}
       >
         {el?.review}
@@ -273,8 +271,8 @@ const TrustedCard: React.FC<TrustedCardProps> = ({ el }) => {
         <div>
           <h3
             className={clsx(
-              "text-[16px] text-[#000000] font-[300] text-center",
-              el?.id === 3 && "text-white"
+              "text-[16px]  font-[300] text-center",
+               "text-white"
             )}
           >
             {el?.name}
@@ -282,7 +280,7 @@ const TrustedCard: React.FC<TrustedCardProps> = ({ el }) => {
           <p
             className={clsx(
               "text-[12px] text-[#000000] mb-0 text-center",
-              el?.id === 3 && "text-white"
+               "text-white"
             )}
           >
             {el?.position}
