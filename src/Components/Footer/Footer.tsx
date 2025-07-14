@@ -170,7 +170,7 @@ const Footer = () => {
       <div className="text-center text-sm mt-2">
         Developed with ❤️ by{" "}
         <Link
-          href="https://github.com/sgovind158"
+          href="https://govind-sahu-portfolio.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-gray-300"
